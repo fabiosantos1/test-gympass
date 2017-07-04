@@ -1,0 +1,45 @@
+{
+  "name": "test-gympass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "srx/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --history-api-fallback",
+    "build": "webpack",
+    "release": "webpack",
+    "test": "test"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babili-webpack-plugin": "^0.1.1",
+    "css-loader": "^0.28.4",
+    "cssnano": "^3.10.0",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "imports-loader": "^0.7.1",
+    "node-sass": "^4.5.3",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-loader": "^2.0.6",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "tiny-slider": "^1.5.5",
+    "url-loader": "^0.5.8",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiosantos1/test-gympass.git"
+  },
+  "author": "Fabio Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabiosantos1/test-gympass/issues"
+  },
+  "homepage": "https://github.com/fabiosantos1/test-gympass#readme"
+}

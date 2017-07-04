@@ -1,0 +1,9 @@
+/// Load URL 
+@function assets($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+// Load images
+@function image($path, $base: $base-url) {
+  @return assets($base, 'images/', $path);
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// Configuration
+@import
+  "utils/variables",
+  "utils/functions",
+  "utils/mixins",
+  "utils/animations";
+
+// Base
+@import
+  "base/base",
+  "base/typography",
+  "base/helpers";
+
+// Layout
+@import
+  "layout/header",
+  "layout/footer";
+ 
+// Pages
+@import
+  "pages/home" 
+;
+
+// Components
+@import
+  "components/buttons" 
+;
+
+//Vendor
+@import
+  "vendor/_normalize.scss",
+  "vendor/tinyslider.scss"
+;

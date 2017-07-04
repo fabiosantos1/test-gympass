@@ -1,0 +1,56 @@
+footer {
+  background-color: #3c3c3c;
+  color: $text-color-inverse;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 1em 0;
+
+  @include breakpoint('medium') {
+    font-size: 1.1em;
+  }
+  
+  ul {
+    @include breakpoint('medium') {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  input {
+    margin-top: 0.5em;
+    height: 2.5em;
+    max-width: 100%;
+    color: $text-color;
+    padding: .5em;
+
+    @include breakpoint('medium') {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: #cdcdcd;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-decoration: none;
+    color: $text-color;
+
+    @include breakpoint('medium') {
+      width: auto;
+      padding: 0 .5em;
+    }
+  }
+
+  li{
+    &:nth-child(2) {
+      @include breakpoint('medium') {
+        margin-left: auto;
+      }
+    }
+  }
+}

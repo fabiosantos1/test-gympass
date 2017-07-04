@@ -1,0 +1,254 @@
+section {
+  h1 {
+    font-size: 2.5em;
+    margin: 1em 0;
+    color: $text-color;
+    text-align: center;
+  }
+
+  &.banner {
+    background-color: #000;
+    height: auto;
+    background-image: image('imageTop.png');
+    background-position: 70% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @include breakpoint('medium') {
+      height: 80vh;
+    }
+
+    h1 {
+      color: $text-color-inverse;
+      text-align: left;
+    }
+
+    ul {
+
+      margin-left: 1.5em;
+      @include breakpoint('medium') {
+        max-width: 550px;
+      }
+
+      li {
+        font-size: 1.5em;
+        margin-bottom: .5em;
+        text-shadow: 1px 1px #000;
+        color: $text-color-inverse;
+        list-style-type: disc;
+      }
+    }
+  }
+
+  &.plan-detail {
+
+    @include breakpoint('medium') {
+      padding: 2em 0;
+    }
+    
+    p {
+      font-size: 1.2em;
+      text-align: center;
+      line-height: 1.5em;
+
+      @include breakpoint('medium') {
+        max-width: 580px;
+        margin: 0 auto;
+        display: block;
+      }
+
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 5em;
+
+      @include breakpoint('medium') {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      dl {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 2em;
+
+        @include breakpoint('medium') {
+          width: 33.3%;
+          padding: 0 2em;
+        }
+
+        dt {
+
+          padding-bottom: 1em;
+
+          img {
+            display: block;
+            margin: 0 auto;
+            padding-bottom: 1em;
+          }
+
+          strong {
+            font-size: 1.2em;
+          }
+        }
+
+        dd {
+          font-size: 1em;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+
+  &.modalities {
+    background-color: #d8d8d8;
+
+    .check {
+
+      a {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 1px solid #727176;
+        font-size: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      ul {
+        li {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: .5em;
+
+          &.active {
+            a {
+              background-color: $text-color;
+            }
+          }
+
+          span {
+            padding-left: 1em;
+          }
+        }
+      }
+    }
+
+    [data-tns-role="nav"] {
+      text-align: center;
+
+      button {
+        background-color: #3c3c3c;
+        width: 2em;
+        height: 2em;
+        margin-right: 1em;
+        border-radius: 1em;
+        display: inline-block;
+      }
+    }
+
+    .slider {
+      margin-top: 2em;    
+
+      li {
+        background-color: #fff;
+        text-align: center;
+        padding: 1em;
+        margin-bottom: 2em;
+
+        &:not(".active") {
+          display: none;
+        }
+
+        @include breakpoint('medium') {
+            min-height: 340px;
+        }
+
+        .title {
+          font-size: 1.8em;
+          margin-bottom: 1.5em;
+          font-weight: bold;
+        }
+
+        .description {
+          line-height: 1.5em;
+          font-size: 0.8em;
+        }
+      }
+
+      
+    }
+  }
+
+  &.questions {
+    background-color: #f1f1f1;
+    
+    ul {
+
+      display: flex;
+      flex-direction: column;
+      padding-top: 2em;
+
+      @include breakpoint('medium') {
+        flex-direction: row;
+      }
+
+      li {
+
+        @include breakpoint('medium') {
+          width: 50%;
+          padding-right: 5%;
+        }
+
+        dl {
+          padding-bottom: 2em;
+
+          dt {
+            font-size: 1.5em;
+            font-weight: bold;
+          }
+
+          dd {
+
+            p {
+              padding-bottom: .5em;
+              line-height: 1.5em;
+
+              a {
+                color: #ff1933;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .button-full-faq {
+      color: #747378;
+      padding: 1em 0;
+      font-size: 1.5em;
+      border: 1px solid #727176;
+      display: block;
+      margin: 3em auto;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #fff;
+        background-color:#727176;
+      }      
+    }
+  }
+}

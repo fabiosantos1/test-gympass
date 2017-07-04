@@ -1,0 +1,147 @@
+.main-header {
+
+    height: 6em;
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: rgb(255,255,255); 
+      height: 6em;
+      border-bottom: 1px solid gray(150);
+
+      @include breakpoint('medium') {
+        position: relative;
+        height: 6em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: none;
+      }
+
+      .logo {
+        margin: 1em;
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+
+        @include breakpoint('medium') {
+          margin: 0;
+        }
+
+      }
+
+      .btn-menu {
+          width: 30px;
+          position: fixed;
+          cursor: pointer;
+          top: 2.2em;
+          left: calc(100% - 4em);
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          flex-direction: column;
+
+          @include breakpoint('medium') {
+            display: none;
+          }
+
+          span {
+              height: 4px;
+              border-radius: 1px;
+              background-color: gray(130);
+              margin-bottom: 4px;
+          }
+      }
+
+      ul {
+          width: 80%;
+          height: 100%;
+          position: fixed;
+          background-color: #000;
+          right: -90%;
+          top: 0;
+          transition: all 0.3s ease-in-out;
+          padding: 2em;
+
+          @include breakpoint('medium') {
+            width: auto;
+            position: relative;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            height: auto;
+            right: 0;
+          }
+
+          li {
+              list-style-type: none;
+              padding: 1em 0;
+
+              @include breakpoint('medium') {
+                margin-left: 2em;
+              }
+
+              & + li {
+                  border-top: 1px solid #e5e5e5;
+
+                  @include breakpoint('medium') {
+                    border-top: 0;
+                  }
+              }
+              
+              a {
+                  text-decoration: none;
+                  font-size: 1.5em;
+                  color:#fff;
+
+                  @include breakpoint('medium') {
+                    color: #ff1933;
+                    font-weight: bold;
+                    font-size: 1em;
+
+                    &:hover {
+                      text-decoration: underline;
+                    }
+
+                  }
+              }
+
+              &:nth-child(5) {
+                margin-top: 25vh;
+
+                @include breakpoint('medium') {
+                  margin-top: 0;
+                  margin-left: 170px;
+                }
+              }
+              
+          }
+      }
+  }
+
+  &.active {
+
+    nav {
+
+      height: 100%;
+
+      ul {
+          right: 0;
+      }
+
+      .logo {
+        opacity: 0;
+        z-index: 0;
+      }
+
+      .btn-menu {
+          left: calc(20% - 4em);
+      }
+    }
+  }
+}

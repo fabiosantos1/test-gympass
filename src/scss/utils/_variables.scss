@@ -1,0 +1,18 @@
+
+$text-font-stack: 'Arial', sans-serif !default;
+$text-color: #404040 !default;
+$text-color-inverse: #fff !default;
+$text-size: 14px;
+$text-size-big: 16px;
+$text-placeholder: #9a9a9a;
+
+$body-color: #fff;
+$max-width: 873px !default;
+
+$breakpoints: (
+  'big': (min-width: 321px),
+  'medium': (min-width: 992px)
+) !default;
+
+$base-url: 'assets/' !default;
+$base-fonts: 'assets/fonts/' !default;
